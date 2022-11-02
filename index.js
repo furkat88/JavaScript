@@ -28,9 +28,21 @@ modal_two.onmouseleave = () => {
 
 let percent = 0
 let imgs = [...cover.children]
+prev.classList.add('displayNone')
 
 function dodo(percent) {
   imgs.forEach(el => el.style.left = `${percent}%`)
+  if (percent === -200) {
+    next.classList.add('displayNone')
+  } else {
+    next.classList.remove('displayNone')
+  }
+
+  if (percent >= 0) {
+    prev.classList.add('displayNone')
+  } else {
+    prev.classList.remove('displayNone')
+  }
 }
 
 next.onclick = () => { 
@@ -44,3 +56,7 @@ prev.onclick = () => {
   percent += 100
   dodo(percent)
 }
+
+
+
+
