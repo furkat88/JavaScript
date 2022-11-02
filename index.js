@@ -57,6 +57,25 @@ prev.onclick = () => {
   dodo(percent)
 }
 
+const blue = document.querySelector('#blue')
+const midnight = document.querySelector('#midnight')
+const pink = document.querySelector('#pink')
+const starlight = document.querySelector('#starlight')
+const red = document.querySelector('#red')
 
+const arrColors = [blue, midnight, pink, starlight, red]
 
+function blabla(arr) {
+  arr.forEach(el => {
+      el.onclick = () => {
+        arr.forEach((x,i) => {
+          x === el ? x.style.border = `2px solid ${
+            x === blue ? '#0b4268' : x === midnight ? '#42474d' : 
+            x === pink ? '#fbe2dd' : x === starlight ? '#fbf7f4' : 'red'
+          }` : x.style.border = ''
+        })
+      }
+  })
+}
 
+blabla(arrColors)
