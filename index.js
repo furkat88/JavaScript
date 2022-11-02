@@ -1,32 +1,46 @@
-const num = document.querySelector('h1')
-const increment = document.querySelector('.increment')
-const reset = document.querySelector('.reset')
-const decrement = document.querySelector('.decrement')
-const random = document.querySelector('.random')
+const modal_one = document.querySelector('.modal_one')
+const modal_two = document.querySelector('.modal_two')
+const plus_one = document.querySelector('.plus_one')
+const plus_two = document.querySelector('.plus_two')
+const cover = document.querySelector('.cover')
+const next = document.querySelector('.next')
+const prev = document.querySelector('.prev')
 
-let number = 0
-
-increment.onclick = () => {
-  if (number === 10) return
-  number++
-  num.innerText = number
+modal_one.onmouseenter = () => {
+  plus_one.style.background = 'black'
+  plus_one.style.color = 'white'
 }
 
-decrement.onclick = () => {
-  if (number === -10) return
-  number--
-  num.innerText = number
+modal_one.onmouseleave = () => {
+  plus_one.style.background = 'white'
+  plus_one.style.color = 'black'
 }
 
-reset.onclick = () => {
-  number = 0
-  num.innerText = number
+modal_two.onmouseenter = () => {
+  plus_two.style.background = 'black'
+  plus_two.style.color = 'white'
 }
 
-random.onclick = () => {
-  let randomPositiveNumber = Math.round(Math.random() * 10)
-  let randomNegativeNumber = Math.round(Math.random() * -10)
-  let pickNumber = Math.random() < 0.5 ? randomNegativeNumber : randomPositiveNumber
-  number = pickNumber
-  num.innerText = number
+modal_two.onmouseleave = () => {
+  plus_two.style.background = 'white'
+  plus_two.style.color = 'black'
+}
+
+let percent = 0
+let imgs = [...cover.children]
+
+function dodo(percent) {
+  imgs.forEach(el => el.style.left = `${percent}%`)
+}
+
+next.onclick = () => { 
+  if(percent < -100) return 
+  percent -= 100
+  dodo(percent)
+}
+
+prev.onclick = () => { 
+  if(percent === 0) return 
+  percent += 100
+  dodo(percent)
 }
