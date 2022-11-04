@@ -282,3 +282,98 @@ h3 {
 #red div{
     background-color: red;
 }
+
+.modal_wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #0000003f;
+}
+
+.modal {
+    position: relative;
+    width: 800px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.closeBtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.modal p {
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.modal a {
+    text-decoration: none;
+}
+
+.modal_ads {
+    width: 550px;
+    padding: 25px;
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.partners:nth-child(1) {
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.partners {
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#selecto {
+    width: 500px;
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid #000000;
+    outline-color: #248cd6;
+}
+
+#selecto::after {
+    content: 'Chose a trade-in';
+    font-size: 12px;
+    
+}

@@ -131,6 +131,12 @@ function blabla(arr) {
 
 blabla(arrColors)
 
-console.log(cover);
+const closeBtn = document.querySelector('.closeBtn')
+const modal_wrapper = document.querySelector('.modal_wrapper')
+const see_modal = document.querySelector('#see_modal')
+
+see_modal.onclick = () => modal_wrapper.classList.remove('displayNone')
+closeBtn.onclick = () => modal_wrapper.classList.add('displayNone')
+
 
 
