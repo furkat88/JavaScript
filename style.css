@@ -42,7 +42,7 @@
     margin: 0 auto;
     display: inline-block;
     margin-top: 15px;
-    width: 1000px;
+    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -50,8 +50,8 @@
 
 .todo_box {
     position: relative;
-    min-width: 300px;
-    height: 90px;
+    max-width: 300px;
+    min-height: 90px;
     border: 1px solid #007FFF;
     border-radius: 10px;
     display: flex;
@@ -61,6 +61,18 @@
     padding-left: 10px;
     padding-right: 45px;
     background: #F0F0F0;
+    overflow: hidden;
+}
+
+.todo_box h3{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 260px;
+}
+
+.todo_box p{
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .todo_close {
