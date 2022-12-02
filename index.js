@@ -56,5 +56,6 @@ addButton.onclick = () => {
   render(todos);
 };
 
+console.log(cover);
 
 
