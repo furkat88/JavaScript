@@ -1,11 +1,15 @@
 const input = document.querySelector("#todo_text");
 const addButton = document.querySelector(".add_todo_button");
 const todosContainer = document.querySelector(".todos_container");
+const modal = document.querySelector('.modal_wrapper')
+const closeModal = document.querySelector('.closeModalBtn')
 
 
+let todos = [];
 
-addButton.onclick = () => {
 
+addButton.onclick = (e) => {
+  e.preventDefault()
   function getdate() {
     const date = new Date();
     const hours = date.getHours();
@@ -35,6 +39,9 @@ addButton.onclick = () => {
     const h3 = document.createElement("h3");
     const p = document.createElement("p");
     const close = document.createElement("div");
+    const edit = document.createElement('span')
+    edit.classList.add('edit_btn')
+    edit.innerText = 'Edit'
     box.classList.add("todo_box");
     close.classList.add("todo_close");
     close.innerHTML = "&#10006";
@@ -43,33 +50,41 @@ addButton.onclick = () => {
     box.appendChild(h3);
     box.appendChild(p);
     box.appendChild(close);
+    box.appendChild(edit);
 
     return box;
   }
 
-  let todos = [];
 
-  function render(arr) {
-    if (arr) arr.forEach((todo) => todosContainer.appendChild(todo));
+  function render(arrOfTodos) {
+    if (arrOfTodos.length) arrOfTodos.forEach((todo) => todosContainer.appendChild(todo.todoEelemnet));
   }
 
   if (input.value.length > 0) {
     let todo = creatTodo(input.value);
-    todos.push(todo);
+    todos.push({todoEelemnet: todo});
     render(todos);
     input.value = ''
   }
 
   todos.forEach(el => {
-    el.childNodes[2].onclick = function() {
+    el.todoEelemnet.childNodes[2].onclick = function() {
       this.parentElement.remove()
+      todos = todos.filter(elem => elem.todoEelemnet !== el.todoEelemnet)
     }
   })
 
-  todos = [...todosContainer.children]
+  todos.forEach(el => {
+    el.todoEelemnet.childNodes[3].onclick = function() {
+      modal.classList.add('show')
+
+    }
+  })
 };
 
-
+closeModal.onclick = () => {
+  modal.classList.remove('show')
+}
 
 
 
