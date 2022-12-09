@@ -11,31 +11,77 @@
 
 <body>
     <div class="wrapper">
-        <h1>Todo list</h1>
-        <div class="add_todo_wrapper">
-            <form>
-                <input type="text" name="todo_text" id="todo_text" placeholder="Add todo">
-                <button class="add_todo_button">Add</button>
-            </form>
+        <div class="image">
+            <!-- <img src="./imgs/image 1.png" alt=""> -->
         </div>
-        <hr>
-        <div class="todos_container">
+        <div class="menu">
+            <div class="price_and_speed">
+                <div class="speed">
+                    <p>Запас хода</p>
+                    <h3>750км</h3>
+                </div>
+                <div class="price">
+                    <p>Цена</p>
+                    <h3>$89, 990</h3>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="kilometr">
+                    <p>Скорость автомобиля</p>
+                    <h2>60 км/ч</h2>
+                    <img src="./imgs/image 3.svg" alt="" class="speed_up">
+                    <img src="./imgs/image 4.svg" alt="" class="speed_down">
+                </div>
+                <div class="temprature">
+                    <p>Температура за окнами</p>
+                    <h2>20°</h2>
+                    <img src="./imgs/image 3.svg" alt="" class="temprature_up">
+                    <img src="./imgs/image 4.svg" alt="" class="temprature_down">
+                </div>
+                <div class="disks">
+                    <p>Диски</p>
+                    <h2>19</h2>
+                    <img src="./imgs/image 3.svg" alt="" class="disks_up">
+                    <img src="./imgs/image 4.svg" alt="" class="disks_down">
+                </div>
+                <div>
+                    <p>Кондиционер</p>
+                    <label for="aircon">
+                        <input type="checkbox" name="aircon" id="aircon">
+                    </label>
+                </div>
+                <div>
+                    <p>Версия Long Range</p>
+                    <label for="long_range">
+                        <input type="checkbox" name="long_range" id="long_range">
+                    </label>
+                </div>
+                <div>
+                    <p>Вид автомобиля</p>
+                    <label for="view">
+                        <input type="checkbox" name="view" id="view">
+                    </label>
+                </div>
+            </div>
 
-        </div>
-    </div>
-
-    <div class="modal_wrapper">
-        <div class="container">
-            <div class="modal">
-                <form>
-                    <textarea name="todotask" id="" cols="30" rows="10" class="newTaskText"></textarea><br>
-                    <button class="newTaskBtn">Add Task</button>
-                    <span class="closeModalBtn">&#10006</span>
-                </form>
+            <div class="saloon_color">
+                <div class="flex_con">
+                    <div class="colors">
+                        <p>Цвет салона</p>
+                        <button class="black"></button>
+                        <button class="white"></button>
+                        <button class="beige"></button>
+                    </div>
+                    <div>
+                        <p>Вид автомобиля</p>
+                        <label for="view">
+                            <input type="checkbox" name="view" id="view">
+                        </label>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     <script src="./index.js"></script>
 </body>
 
