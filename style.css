@@ -24,9 +24,15 @@ img {
     position: relative;
     width: 900px;
     height: 400px;
-    background-image: url('./imgs/image\ 1.png');
-    background-position: center;
-    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: -4px -3px 23px -2px rgba(34, 60, 80, 0.13);
+    /* animation-name: scale; */
+    animation-duration: 2s;
+    /* object-fit: contain; */
 }
 
 .price_and_speed {
@@ -132,3 +138,122 @@ img {
 .black{background-color: black;}
 .white{background-color: rgb(168, 168, 168);}
 .beige{background-color: beige;}
+
+#aircon {position: absolute; top: -1000px;}
+.aircon {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 15px;
+    background-color: rgb(206, 206, 206);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.aircon_r {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(66, 66, 66);
+    left: 1px;
+    transition: .3s ease;
+}
+
+#long_range {position: absolute; top: -1000px;}
+.long_range {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 15px;
+    background-color: rgb(206, 206, 206);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.long_range_r {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(66, 66, 66);
+    left: 1px;
+    transition: .3s ease;
+}
+
+#view {position: absolute; top: -1000px;}
+.view {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 15px;
+    background-color: rgb(206, 206, 206);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.view_r {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(66, 66, 66);
+    left: 1px;
+    transition: .3s ease;
+}
+
+#view2 {position: absolute; top: -1000px;}
+.view2 {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 15px;
+    background-color: rgb(205, 205, 205);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.view_r2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(66, 66, 66);
+    left: 1px;
+    transition: .3s ease;
+}
+
+.saloon3, .saloon2, .saloon1 {
+    width: 100%;
+    display: none;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+@keyframes scale {
+    from {
+        background-size: 100%;
+    }
+
+    to {
+        background-size: 10000px;
+    }
+}
