@@ -11,82 +11,53 @@
 
 <body>
     <div class="wrapper">
-        <div class="image">
-            <img src="./imgs/image1.png" alt="" class="tesla">
-            <img src="./imgs/image10.png" alt="" class="saloon3">
-            <img src="./imgs/image9.png" alt="" class="saloon2">
-            <img src="./imgs/image8.png" alt="" class="saloon1">
+
+        <div class="dashboard_container">
+            <h1>Dashboard</h1>
+            <button class="add_task_btn">Add task</button>
+            <input type="text" placeholder="Find task" class="task_search_input">
         </div>
-        <div class="menu">
-            <div class="price_and_speed">
-                <div class="speed">
-                    <p>Запас хода</p>
-                    <h3>750км</h3>
-                </div>
-                <div class="price">
-                    <p>Цена</p>
-                    <h3>$89, 990</h3>
-                </div>
-            </div>
-            <div class="stats">
-                <div class="kilometr">
-                    <p>Скорость автомобиля</p>
-                    <h2>60 км/ч</h2>
-                    <img src="./imgs/image3.svg" alt="" class="speed_up">
-                    <img src="./imgs/image4.svg" alt="" class="speed_down">
-                </div>
-                <div class="temprature">
-                    <p>Температура за окнами</p>
-                    <h2>20°</h2>
-                    <img src="./imgs/image3.svg" alt="" class="temprature_up">
-                    <img src="./imgs/image4.svg" alt="" class="temprature_down">
-                </div>
-                <div class="disks">
-                    <p>Диски</p>
-                    <h2>19</h2>
-                    <img src="./imgs/image3.svg" alt="" class="disks_up">
-                    <img src="./imgs/image4.svg" alt="" class="disks_down">
-                </div>
-                <div>
-                    <p>Кондиционер</p>
-                    <label for="aircon" class="aircon">
-                        <input type="checkbox" name="aircon" id="aircon">
-                        <div class="aircon_r"></div>
-                    </label>
-                </div>
-                <div>
-                    <p>Версия Long Range</p>
-                    <label for="long_range" class="long_range">
-                        <input type="checkbox" name="long_range" id="long_range">
-                        <div class="long_range_r"></div>
 
-                    </label>
-                </div>
-                <div>
-                    <p>Вид автомобиля</p>
-                    <label for="view" class="view">
-                        <input type="checkbox" name="view" id="view">
-                        <div class="view_r"></div>
-                    </label>
-                </div>
-            </div>
+        <nav class="navigation">
+            <span>Show tasks as:</span>
+            <span class="table_btn">Table</span>
+            <span class="cards_btn">Cards</span>
+        </nav>
 
-            <div class="saloon_color">
-                <div class="flex_con">
-                    <div class="colors">
-                        <p>Цвет салона</p>
-                        <button class="black"></button>
-                        <button class="white"></button>
-                        <button class="beige"></button>
-                    </div>
-                    <div>
-                        <p>Вид автомобиля</p>
-                        <label for="view2" class="view2">
-                            <input type="checkbox" name="view2" id="view2">
-                            <div class="view_r2"></div>
-                        </label>
-                    </div>
-                </div>
+        <div class="tasks_container">
+            <div class="table_container">
+                <table class="table">
+                </table>
+            </div>
+            <div class="cards_container">
+                <div class="cards_wrapper"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal_container">
+        <div class="center_modal">
+            <div class="modal_wrapper">
+                <div class="modal_close_btn">&#x2716;</div>
+                <div class="added_warn">Added</div>
+                <h2>Add new task!</h2>
+                <form class="form">
+                    <select name="status" id="status">
+                        <option value="New">New</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Done">Done</option>
+                    </select>
+                    <label for="time">
+                        <input type="datetime-local" name="time" id="time">
+                    </label>
+                    <label for="title">
+                        <input type="text" name="title" id="title" placeholder="Title">
+                    </label>
+                    <label for="description">
+                        <input type="text" name="description" id="description" placeholder="Description">
+                    </label>
+                    <input type="submit" value="Add new task" class="form_btn">
+                </form>
             </div>
         </div>
     </div>
